@@ -15,6 +15,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+/**
+ * JWT filter.
+ */
 @Component
 public class JwtFilter extends OncePerRequestFilter {
   @Autowired
@@ -23,7 +26,8 @@ public class JwtFilter extends OncePerRequestFilter {
   private PersonServiceInterface personService;
 
   @Override
-  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+      FilterChain filterChain) throws ServletException, IOException {
     Optional<String> token = extractToken(request);
     if (token.isPresent()) {
       String subject = tokenService.validateToken(token.get());
