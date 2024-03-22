@@ -7,4 +7,6 @@ public interface TokenServiceInterface {
 
   String generateToken(String username);
 
+  String validateToken(String token);
+
 }

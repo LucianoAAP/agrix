@@ -3,6 +3,7 @@ package com.betrybe.agrix.controller;
 import com.betrybe.agrix.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,7 +19,7 @@ public class ExceptionController {
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exception.getMessage());
   }
   
-  @ExceptionHandler({BadCredentialsException.class})
+  @ExceptionHandler({BadCredentialsException.class, AccessDeniedException.class})
   public ResponseEntity<String> handleUsernameNotFoundException(Exception exception) {
     return ResponseEntity.status(HttpStatus.FORBIDDEN).body(exception.getMessage());
   }

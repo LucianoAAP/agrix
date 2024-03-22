@@ -30,4 +30,12 @@ public class TokenService implements TokenServiceInterface {
   private Instant generateExpiration() {
     return Instant.now().plus(2, ChronoUnit.HOURS);
   }
+  
+  @Override
+  public String validateToken(String token) {
+    return JWT.require(algorithm)
+        .build()
+        .verify(token)
+        .getSubject();
+  }
 }
