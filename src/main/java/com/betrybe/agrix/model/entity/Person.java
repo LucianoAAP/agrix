@@ -1,7 +1,8 @@
-package com.betrybe.agrix.ebytr.staff.entity;
+package com.betrybe.agrix.model.entity;
 
 
-import com.betrybe.agrix.ebytr.staff.security.Role;
+import com.betrybe.agrix.dto.PersonCreationDto;
+import com.betrybe.agrix.model.enums.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +28,12 @@ public class Person {
   private Role role;
 
   public Person() {
+  }
+  
+  public Person(PersonCreationDto personRequest) {
+    this.username = personRequest.username();
+    this.password = personRequest.password();
+    this.role = personRequest.role();
   }
 
   public Long getId() {

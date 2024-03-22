@@ -1,8 +1,8 @@
-package com.betrybe.agrix.ebytr.staff.service;
+package com.betrybe.agrix.service.staff;
 
-import com.betrybe.agrix.ebytr.staff.entity.Person;
-import com.betrybe.agrix.ebytr.staff.exception.PersonNotFoundException;
-import com.betrybe.agrix.ebytr.staff.repository.PersonRepository;
+import com.betrybe.agrix.exception.PersonNotFoundException;
+import com.betrybe.agrix.model.entity.Person;
+import com.betrybe.agrix.model.repository.PersonRepository;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * Service layer class for handling persons business logic.
  */
 @Service
-public class PersonService {
+public class PersonService implements PersonServiceInterface {
 
   private final PersonRepository personRepository;
 
@@ -24,6 +24,7 @@ public class PersonService {
   /**
    * Returns a person for a given ID.
    */
+  @Override
   public Person getPersonById(Long id) {
     Optional<Person> person = personRepository.findById(id);
 
@@ -37,6 +38,7 @@ public class PersonService {
   /**
    * Returns a person for a given username.
    */
+  @Override
   public Person getPersonByUsername(String username) {
     Optional<Person> person = personRepository.findByUsername(username);
 
@@ -50,6 +52,7 @@ public class PersonService {
   /**
    * Creates a new person.
    */
+  @Override
   public Person create(Person person) {
     return personRepository.save(person);
   }

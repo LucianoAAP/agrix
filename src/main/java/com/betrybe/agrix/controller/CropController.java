@@ -31,7 +31,7 @@ public class CropController {
   private FertilizerServiceInterface fertilizerService;
   
   /**
-   * Get all crops.
+   * Gets all crops.
    */
   @GetMapping
   public ResponseEntity<List<CropDto>> getAll() {
@@ -41,7 +41,7 @@ public class CropController {
   }
   
   /**
-   * Get crop by id.
+   * Gets a crop by id.
    */
   @GetMapping(value = "/{id}")
   public ResponseEntity<CropDto> getById(@PathVariable int id) throws NotFoundException {
@@ -52,7 +52,7 @@ public class CropController {
   }
   
   /**
-   * Search crops.
+   * Searches crops.
    */
   @GetMapping(value = "/search")
   public ResponseEntity<List<CropDto>> search(
@@ -64,7 +64,7 @@ public class CropController {
   }
   
   /**
-   * Get fertilizers.
+   * Gets fertilizers.
    */
   @GetMapping(value = "/{cropId}/fertilizers")
   public ResponseEntity<List<FertilizerDto>> getFertilizers(@PathVariable int cropId)
@@ -76,7 +76,7 @@ public class CropController {
   }
 
   /**
-   * Associate fertilizer.
+   * Associates a fertilizer.
    */
   @PostMapping(value = "/{cropId}/fertilizers/{fertilizerId}")
   public ResponseEntity<String> associateFertilizer(@PathVariable int cropId,

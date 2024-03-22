@@ -27,7 +27,7 @@ public class FertilizerController {
   private FertilizerServiceInterface fertilizerService;
   
   /**
-   * Get all fertilizers.
+   * Gets all fertilizers.
    */
   @GetMapping
   public ResponseEntity<List<FertilizerDto>> getAll() {
@@ -37,7 +37,7 @@ public class FertilizerController {
   }
   
   /**
-   * Get fertilizer by id.
+   * Gets a fertilizer by id.
    */
   @GetMapping(value = "/{id}")
   public ResponseEntity<FertilizerDto> getById(@PathVariable int id) throws NotFoundException {
@@ -48,7 +48,7 @@ public class FertilizerController {
   }
   
   /**
-   * Save fertilizer.
+   * Saves a fertilizer.
    */
   @PostMapping
   public ResponseEntity<FertilizerDto> save(@RequestBody FertilizerCreationDto fertilizerBody) {

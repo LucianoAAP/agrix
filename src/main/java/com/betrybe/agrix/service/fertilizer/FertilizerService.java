@@ -22,7 +22,7 @@ public class FertilizerService implements FertilizerServiceInterface {
   private CropServiceInterface cropService;
   
   /**
-   * Get all fertilizers.
+   * Gets all fertilizers.
    */
   @Override
   public List<Fertilizer> getAll() {
@@ -30,7 +30,7 @@ public class FertilizerService implements FertilizerServiceInterface {
   }
   
   /**
-   * Get fertilizer by id.
+   * Gets a fertilizer by id.
    */
   @Override
   public Fertilizer getById(int id) throws NotFoundException {
@@ -42,7 +42,7 @@ public class FertilizerService implements FertilizerServiceInterface {
   }
   
   /**
-   * Save fertilizer.
+   * Saves a fertilizer.
    */
   @Override
   public Fertilizer save(FertilizerCreationDto fertilizerBody) {
@@ -52,7 +52,7 @@ public class FertilizerService implements FertilizerServiceInterface {
   }
   
   /**
-   * Associate crop.
+   * Associates a crop.
    */
   @Override
   public void associateCrop(int fertilizerId, int cropId) throws NotFoundException {

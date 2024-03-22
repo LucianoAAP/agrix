@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class ModelDtoConverter {
 
   /**
-   * Convert list of crops to dto list.
+   * Converts a list of crops to dto list.
    */
   public static List<CropDto> convertCropsListToDtoList(List<Crop> crops) {
     List<CropDto> response = crops.stream().map(crop -> {
@@ -25,7 +25,7 @@ public class ModelDtoConverter {
   }
   
   /**
-   * Convert list of crops to dto list.
+   * Converts a list of crops to dto list.
    */
   public static List<FertilizerDto> convertFertilizersListToDtoList(List<Fertilizer> fertilizers) {
     List<FertilizerDto> response = fertilizers.stream().map(fertilizer -> {

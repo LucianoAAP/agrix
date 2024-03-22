@@ -1,8 +1,9 @@
-package com.betrybe.agrix.ebytr.staff.repository;
+package com.betrybe.agrix.model.repository;
 
-import com.betrybe.agrix.ebytr.staff.entity.Person;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.betrybe.agrix.model.entity.Person;
 
 /**
  * Person JPA repository.

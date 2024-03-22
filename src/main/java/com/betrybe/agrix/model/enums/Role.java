@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.security;
+package com.betrybe.agrix.model.enums;
 
 /**
  * Enum representing a Role.

@@ -50,7 +50,7 @@ public class FarmController {
   }
   
   /**
-   * Get crops.
+   * Gets crops.
    */
   @GetMapping(value = "/{farmId}/crops")
   public ResponseEntity<List<CropDto>> getCrops(@PathVariable int farmId) throws NotFoundException {
@@ -60,7 +60,7 @@ public class FarmController {
   }
   
   /**
-   * Save crops.
+   * Saves crops.
    */
   @PostMapping(value = "/{farmId}/crops")
   public ResponseEntity<CropDto> saveCrops(@PathVariable int farmId,
