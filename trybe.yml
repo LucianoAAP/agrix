@@ -1,4 +1,0 @@
-ignore_files:
-  - src/test/java/com/betrybe/agrix/evaluation
-  - mvnw
-  - .mvn/
