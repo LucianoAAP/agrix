@@ -23,9 +23,11 @@ This application requires "Java", "Maven" and "MySQL" installed
 
 Just create a database named "agrix" in mysql and the tables will be created when the application starts.
 
-Table diagram:
+<details>
+    <summary>Table diagram:</summary>
 
-![Table model](images/tables.png)
+    ![Table model](images/tables.png)
+</details>
 
 ## Installation
 
