@@ -25,7 +25,7 @@ Just create a database named "agrix" in mysql and the tables will be created whe
 
 Table diagram:
 
-![Table model](tables.png)
+![Table model](images/tables.png)
 
 ## Installation
 
